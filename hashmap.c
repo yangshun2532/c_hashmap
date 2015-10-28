@@ -278,7 +278,7 @@ int hashmap_put(map_t in, char* key, any_t value){
 	m->data[index].data = value;
 	m->data[index].key = key;
 	
-	/* if key is already exsit, keep m->size, otherwise ++*/
+	/* if key is already exsit, keep m->size, otherwise ++* .  by sinyer/
 	id(m->data[index].in_use ==0)
 		m->size++;
 		
