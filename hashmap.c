@@ -277,8 +277,12 @@ int hashmap_put(map_t in, char* key, any_t value){
 	/* Set the data */
 	m->data[index].data = value;
 	m->data[index].key = key;
+	
+	/* if key is already exsit, keep m->size, otherwise ++*/
+	id(m->data[index].in_use ==0)
+		m->size++;
+		
 	m->data[index].in_use = 1;
-	m->size++; 
 
 	return MAP_OK;
 }
