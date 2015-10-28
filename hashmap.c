@@ -13,7 +13,7 @@
 /* We need to keep keys and values */
 typedef struct _hashmap_element{
 	char* key;
-	int in_use;
+	int in_use; //why need this? if key is null ,it is not used . by sinyer
 	any_t data;
 } hashmap_element;
 
